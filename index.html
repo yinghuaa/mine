@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+
+<style type="text/css">
+	@keyframes moving {
+	  	from { background-position: 0%  }
+	 	to   { background-position: 100% }
+	}
+	body{
+		background: seashell;
+		background-image : url(02.png);
+		background-repeat : no-repeat;
+		height: 20vh; 
+		animation: moving 5s linear infinite;
+	}
+	table{
+		border: 0px solid black;
+		border-radius: 10px;
+		table-layout: fixed;
+		width: 100%;
+	}
+	td{
+		border-radius: 10px;
+	}
+	img{
+		border-radius: 10px;
+	}
+	#clock{
+		color:white;
+		font: 2em sans-serif; 
+		background: black; 
+		margin: 5px auto;
+		padding: 5px;
+		border: solid gray 2px; 
+		border-radius: 10px;
+		width:180px;
+		text-align:center;
+	}		
+	#sidebar_left{
+　		text-align: center;
+　		float: left;
+	}
+	#sidebar_right{
+　		text-align: center;
+　		float: right;
+	}
+</style>
+
+<script>
+function startTime(){
+  var today = new Date();
+  var hh = today.getHours();
+  var mm = today.getMinutes();
+  var ss = today.getSeconds();
+  mm = checkTime(mm);
+  ss = checkTime(ss);
+  document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+  var timeoutId = setTimeout(startTime, 500);
+}
+
+function checkTime(i){
+  if(i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+
+<body onload="startTime()">
+
+	<div id="clock">
+		<script language:JavaScript>
+        	<!--
+        	today= new Date()
+        	dateValue=(today.getYear()+1900)+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日";
+        	window.alert("\n看什麼看!\n\n今天是"+dateValue);
+        	//-->
+    	</script>
+	</div>
+
+	<div id="sidebar_left">
+	<table border="0" align ="center">
+		<tr>
+			<td>
+			<h2 align="center"><a href="https://www.pu.edu.tw/"target="_blank">靜宜大學</a></h2><br>
+			<h2 align="center"><a href="https://csim.pu.edu.tw/"target="_blank">資管系</a></h2><br>
+	</div>
+
+	<td align="center"><img src="https://www1.pu.edu.tw/~s1101699/CSP/411016995" width="80%">
+
+	<div align="center">
+    <audio src="music.m4a" autoplay controls></audio>
+  </div>
+
+	<div id="sidebar_right">
+		<td>
+		<h2 align="center"><a href="myself.html"target="_blank">自我介紹</a></h2><br>
+		<h2 align="center"><a href="classschedule.html"target="_blank">課表</a></h2><br>
+		<h2 align="center"><a href="www.html"target="_blank">常用連結</a></h2><br>
+		<h2 align="center"><a href="onlinelearning.html"target="_blank">線上學習</a></h2><br>
+		<h2 align="center"><a href="homework.html"target="_blank">隨堂作業</a></h2><br>
+		<h2 align="center"><a href="report.pdf"target="_blank">期末報告</a></h2><br>
+	</div>
+</body>
+</html>

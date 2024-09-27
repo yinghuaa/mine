@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>四則運算</title>
+    <style> 
+        input {margin-left: 1em;}
+    </style>
+    <script>
+    function validate1(){
+      // 取得所有 name="answer" 的物件
+      var all1 = document.forms["form1"].elements["answer"];
+      
+      if(all1[1].checked)     // 若是第 1 項 (36) 被選取 
+        alert("Good Job!");
+      else                   // 若是選了其它答案
+        alert("Try Again!"); 
+    }
+    function validate2(){
+      var all2 = document.forms["form2"].elements["answer"];
+      
+      if(all2[0].checked)     // 若是第 1 項 (36) 被選取 
+        alert("Good Job!");
+      else                   // 若是選了其它答案
+        alert("Try Again!"); 
+    }
+    function validate3(){
+      var all3 = document.forms["form3"].elements["answer"];
+      
+      if(all3[2].checked)     // 若是第 1 項 (36) 被選取 
+        alert("Good Job!");
+      else                   // 若是選了其它答案
+        alert("Try Again!"); 
+    }
+    function validate4(){
+      var all4 = document.forms["form4"].elements["answer"];
+      
+      if(all4[0].checked)     // 若是第 1 項 (36) 被選取 
+        alert("Good Job!");
+      else                   // 若是選了其它答案
+        alert("Try Again!"); 
+    }
+    </script>
+</head>
+<body>
+    <h3>小學生加法練習</h3>
+    <form name="form1" onsubmit="validate1();return false;">
+      50 + 19 = ?
+      <input type="radio" name="answer" value="5019" required>5019
+      <input type="radio" name="answer" value="69" required>69 
+      <input type="radio" name="answer" value="519" required>519
+      <input type="submit">
+    </form>
+    <h3>小學生減法練習</h3>
+    <form name="form2" onsubmit="validate2();return false;">
+      150 - 65 = ?
+      <input type="radio" name="answer" value="85" required>85
+      <input type="radio" name="answer" value="55" required>55 
+      <input type="radio" name="answer" value="1065" required>1065
+      <input type="submit">
+    </form>
+    <h3>小學生乘法練習</h3>
+    <form name="form3" onsubmit="validate3();return false;">
+      8 * 5 = ?
+      <input type="radio" name="answer" value="13" required>13
+      <input type="radio" name="answer" value="85" required>85 
+      <input type="radio" name="answer" value="40" required>40
+      <input type="submit">
+    </form>
+    <h3>小學生除法練習</h3>
+    <form name="form4" onsubmit="validate4();return false;">
+      6 / 2 = ?
+      <input type="radio" name="answer" value="3" required>3
+      <input type="radio" name="answer" value="4" required>4 
+      <input type="radio" name="answer" value="62" required>62
+      <input type="submit">
+    </form>
+</body>
+</html>
