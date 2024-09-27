@@ -4,9 +4,24 @@
     <meta charset="utf-8" />
     <title>hw1130</title>
     <style>
-        div      { float:right; margin:10px;}
-        img      { width:300px; }
-        #origin  { width:300px; }
+        div { 
+          float:right;
+        }
+        img {
+          width:200px;
+          display: block;
+          margin: 0 auto;
+        }
+        figure { 
+          text-align: center;
+          margin: 20px;
+          display: inline-block;
+        }
+        figcaption {
+          margin-top: 10px;
+          font-size: 16px;
+        }
+
         #blur {
             filter:blur(10px);
             -webkit-filter:blur(10px);
@@ -30,24 +45,93 @@
     </style>
 </head>
 <body>
-    <img id="origin" src="photo.jpg">
+    <button onclick="history.back()">回到上一頁</button>
+    
     <div>
-      <img id="blur" src="photo.jpg">
-      <br><span>blur(10px)</span></div>
-    <div>
-      <img id="contrast" src="photo.jpg">
-      <br><span>contrast(500%)</span></div>
-    <div>
-      <img id="hue-rotate" src="photo.jpg">
-      <br><span>hue-rotate(90deg)</span>
-    </div>
-    <div>
-      <img id="sepia" src="photo.jpg">
-      <br><span>sepia(90%)</span>
-    </div>
-    <div>
-      <img id="saturate" src="photo.jpg">
-      <br><span>saturate(3)</span>
+      <figure>
+        <img id="origin" src="photo.jpg" alt="Original Image">
+        <figcaption>Original</figcaption>
+      </figure>
+
+      <figure>
+        <img id="blur" src="photo.jpg" alt="Blur Effect">
+        <figcaption>blur(10px)</figcaption>
+      </figure>
+
+      <figure>
+        <img id="contrast" src="photo.jpg" alt="Contrast Effect">
+        <figcaption>contrast(500%)</figcaption>
+      </figure>
+
+      <figure>
+        <img id="hue-rotate" src="photo.jpg" alt="Hue Rotate Effect">
+        <figcaption>hue-rotate(90deg)</figcaption>
+      </figure>
+
+      <figure>
+        <img id="sepia" src="photo.jpg" alt="Sepia Effect">
+        <figcaption>sepia(90%)</figcaption>
+      </figure>
+
+      <figure>
+        <img id="saturate" src="photo.jpg" alt="Saturate Effect">
+        <figcaption>saturate(3)</figcaption>
+      </figure>
     </div>
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hw1130</title>
+    <style>
+        div { 
+          float:right; margin:10px;
+        }
+        img {
+          width:300px;
+        }
+        #origin { 
+          width:300px;
+        }
+        #blur {
+          filter:blur(10px);
+          -webkit-filter:blur(10px);
+        }  
+        #contrast {
+          filter:contrast(500%);
+          -webkit-filter:contrast(500%);
+        }
+        #hue-rotate {
+          filter:hue-rotate(90deg);
+          -webkit-filter:hue-rotate(90deg);
+        }
+        #sepia {
+          filter:sepia(90%);
+          -webkit-filter:sepia(90%);
+        }
+        #saturate {
+          filter:saturate(3);
+          -webkit-filter:saturate(3);
+        }   
+    </style>
+</head>
+<body>
+    <button onclick="history.back()">回到上一頁</button>
+    <div>
+      <img id="origin" src="photo.jpg">
+      <img id="blur" src="photo.jpg">
+      <span>blur(10px)</span>
+      <img id="contrast" src="photo.jpg">
+      <span>contrast(500%)</span>
+      <img id="hue-rotate" src="photo.jpg">
+      <span>hue-rotate(90deg)</span>
+      <img id="sepia" src="photo.jpg">
+      <span>sepia(90%)</span>
+      <img id="saturate" src="photo.jpg">
+      <span>saturate(3)</span>
+    </div>
+</body>
+</html> -->
